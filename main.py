@@ -87,6 +87,7 @@ def Locate(board, obj, pos, hp = None, maxhp = enemyHp['enemy'], ps = None):
 
     return True
 
+
 def ifLocate(board, obj, pos):
 
     H, W, _ = board.shape
