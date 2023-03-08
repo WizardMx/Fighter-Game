@@ -393,7 +393,7 @@ def update(objs, board):
 
             if obj.lastHit is not None and time.time() - obj.lastHit > 0.2:
                 obj.sticker = boss2()
-                obj.pos = ufoPos
+                # obj.pos = ufoPos
                 obj.lastHit = None
 
         if obj.type == 'boom':
@@ -647,7 +647,7 @@ def game1(board, boardSize, src_highscore):
             info.fireLevel = 2
         if key == ord('3'):
             info.fireLevel = 3
-        if key == ord('0'):
+        if key == ord('4'):
             info.fireLevel = 4
 
         # if len(a) and a[-1].name == 'space' and time.time() - a[-1].time < 0.2:
@@ -769,7 +769,7 @@ def game1(board, boardSize, src_highscore):
                 else:
                     objs.append(object('boom', boom(enemySize), obj.pos))
                     objs.remove(obj)
-            cv2.putText(board, 'BOOS is coming !!!', (80, 300), cv2.FONT_ITALIC, 1, (255, 255, 0), 2)
+            cv2.putText(board, 'BOOS is coming !!!', (60, 300), cv2.FONT_ITALIC, 1, (255, 255, 0), 2)
         elif time.time() - info.ST < game1Time + 6 and len(objs) <= 4:
             objs.append(object('enemy-ufo', boss2(), [0, 510], hp=enemyHp['enemy-ufo']))
             objs.append(object('enemy-ufo', boss2(), [-100, 400], hp=enemyHp['enemy-ufo']))

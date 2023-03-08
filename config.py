@@ -1,5 +1,5 @@
 # game config
-game1Time = 90
+game1Time = 10
 
 # fighter config
 fighterSize = 50
